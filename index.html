@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Murlidhar UV Stickers</title>
+  <title>Murlidhar UV Stickers</title>
+
+  <style>
+    .tabs {
+      margin: 20px;
+    }
+
+    .tabs button {
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .tabs button:hover {
+      background: black;
+      color: white;
+    }
+
+    .gallery img {
+      width: 150px;
+      margin: 10px;
+    }
+  </style>
 </head>
+
 <body style="text-align:center; font-family:sans-serif;">
-    <h1>🔥 Murlidhar UV Stickers</h1>
-    <p>Premium UV DTF Sticker Manufacturer</p>
+
+  <h1>🔥 Murlidhar UV Stickers</h1>
+  <p>Premium UV DTF Sticker Manufacturer</p>
+
+  <div class="tabs">
+    <button onclick="filterItems('all')">All</button>
+    <button onclick="filterItems('gods')">Gods</button>
+    <button onclick="filterItems('cartoon')">Cartoon</button>
+    <button onclick="filterItems('girls')">Girls</button>
+    <button onclick="filterItems('boys')">Boys</button>
+  </div>
+
+  <div class="gallery">
+    <img src="images/god1.png" class="item gods">
+    <img src="images/cartoon1.png" class="item cartoon">
+    <img src="images/girl1.png" class="item girls">
+  </div>
+
+  <script>
+    function filterItems(category) {
+      let items = document.querySelectorAll('.item');
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'inline-block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
-<div class="tabs">
-  <button onclick="filterItems('all')">All</button>
-  <button onclick="filterItems('gods')">Gods</button>
-  <button onclick="filterItems('cartoon')">Cartoon</button>
-  <button onclick="filterItems('girls')">Girls</button>
-  <button onclick="filterItems('boys')">Boys</button>
-</div>
-
-<div class="gallery">
-  <img src="images/god1.png" class="item gods">
-  <img src="images/cartoon1.png" class="item cartoon">
-  <img src="images/girl1.png" class="item girls">
-</div>
