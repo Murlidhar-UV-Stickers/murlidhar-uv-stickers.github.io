@@ -1,0 +1,13 @@
+<div class="tabs">
+  <button onclick="filterItems('all')">All</button>
+  <button onclick="filterItems('gods')">Gods</button>
+  <button onclick="filterItems('cartoon')">Cartoon</button>
+  <button onclick="filterItems('girls')">Girls</button>
+  <button onclick="filterItems('boys')">Boys</button>
+</div>
+
+<div class="gallery">
+  <img src="images/god1.png" class="item gods">
+  <img src="images/cartoon1.png" class="item cartoon">
+  <img src="images/girl1.png" class="item girls">
+</div>
